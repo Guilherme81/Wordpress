@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const session = require("express-session");
 app.use(session({
     secret: "dilera", 
-    cookie: {maxAge: 30000000}
+    cookie: {maxAge: 3000000000000}
 }));
 
 const categoriesController = require("./categories/CategoriesController");

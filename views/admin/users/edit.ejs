@@ -5,16 +5,19 @@
             <div class="container">
                 <div class="card" id="create">
                     <div class="card-header">
-                        <h2>Criação de usúario</h2>
+                        <h2>Editando o usúario</h2>
                     </div>
                     <div class="card-body">
-                       <form action="/users/create" method="POST">
-                        <input type="email" name="email" placeholder="email@exemplo.com" class="form-control">
+                       <form action="/users/update" method="POST">
+                          
+                        <input type="email" name="email" placeholder="email@exemplo.com" class="form-control" value="<%= user.email %>" >
                         <br>
                         <input type="password" name="password" placeholder="*****" class="form-control">
+                        <input type="hidden" name="id" value="<%= user.id %> ">
                         <br>
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-success btn-block">Criar</button>
+                            
+                            <button type="submit" class="btn btn-success btn-block">Editar</button>
                         </div>
                        </form>
                     </div>

@@ -1,0 +1,17 @@
+#espaco{
+margin-top: 5vh;
+}
+
+#create{
+    margin-top: 10vh;
+}
+
+#login{
+    margin-top: 10vh;
+    margin-left: 30vh;
+    margin-right: 30vh;
+}
+
+#next{
+    margin-block-end: 10vh;
+}

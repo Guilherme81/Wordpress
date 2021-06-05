@@ -3,46 +3,49 @@
     <body>
         <%- include("../../partials/navbar.ejs") %>
             <div class="container">
-                <hr>
-                <h2>Artigos</h2>
-                <a class="btn btn-success" href="/admin/articles/new">Criar nova artigo</a>
-                <hr>
-                <table class="table table-bordered">
-                    <thead>
-                        <th>Id</th>
-                        <th>Título</th>
-                        <th>Slug</th>
-                        <th>Categoria</th>
-                        <th>Ações</th>
-                    </thead>
-                    <tbody>
-                        <% articles.forEach(article=> { %>
-                            <tr>
-                                <td>
-                                    <%= article.id %>
-                                </td>
-                                <td>
-                                    <%= article.title %>
-                                </td>
-                                <td>
-                                    <%= article.slug%>
-                                </td>
-                                <td>
-                                    <%= article.category.title %>
-                                </td>
-                                <td>
+                <div id="espaco">
+                    <h2>Artigos</h2>
+                    <a class="btn btn-success" href="/admin/articles/new">Criar nova artigo</a>
+                    <hr>
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Id</th>
+                            <th>Título</th>
+                            <th>Slug</th>
+                            <th>Categoria</th>
+                            <th>Ações</th>
+                        </thead>
+                        <tbody>
+                            <% articles.forEach(article=> { %>
+                                <tr>
+                                    <td>
+                                        <%= article.id %>
+                                    </td>
+                                    <td>
+                                        <%= article.title %>
+                                    </td>
+                                    <td>
+                                        <%= article.slug%>
+                                    </td>
+                                    <td>
+                                        <%= article.category.title %>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/articles/edit/<%= article.id %> "
+                                            class="btn btn-warning">Editar</a>
 
-                                    <form action="/articles/delete" method="POST" style="display: inline;"
-                                        onsubmit="confirmarDelecao(event, this)">
-                                        <input type="hidden" name="id" value="<%= article.id %>">
-                                        <button class="btn btn-danger">Deletar</button>
-                                    </form>
+                                        <form action="/articles/delete" method="POST" style="display: inline;"
+                                            onsubmit="confirmarDelecao(event, this)">
+                                            <input type="hidden" name="id" value="<%= article.id %>">
+                                            <button class="btn btn-danger">Deletar</button>
+                                        </form>
 
-                                </td>
-                            </tr>
-                            <% }) %>
-                    </tbody>
-                </table>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
             </div>
     </body>
     <%- include("../../partials/footer.ejs") %>

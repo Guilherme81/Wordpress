@@ -2,15 +2,12 @@
 <%- include("partials/homenavbar.ejs") %> 
 <body>
     <div class="container">
-         <hr>
-         <div class="jumbotron">
+        
+         <div class="jumbotron" id="espaco">
             <h1 class="display-4">Bem vindo</h1>
             <p class="lead">Este é um simples blog feito por Guilherme</p>
             <hr class="my-4">
-            <p>Descrição</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
           </div>
-         <hr>
         <%  articles.forEach(article => { %> 
             <div class="card">
                 <div class="card-header">
@@ -22,13 +19,11 @@
             </div>
             <br>
         <%  }); %>     
-        <div class="row">
+        <div class="row" id="">
             <div class="col col-12">
-                <a style="float: right;" href="/articles/page/2">next >>></a>
+                <a style="float: right;" href="/articles/page/2" class="btn btn-primary" id="next">next >>></a>
             </div>
-            <hr>
         </div>
-        <hr>
     </div>
 </body>
 <%- include("partials/footer.ejs") %>  
