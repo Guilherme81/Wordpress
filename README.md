@@ -1,2 +1,2 @@
 # Wordpress
-##Um wordpress feito com javascript
+Um wordpress feito com javascript
